@@ -1,16 +1,67 @@
-# React + Vite
+# MoviesLib
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicação de catálogo de filmes desenvolvida com **React** e **Vite**, que consome dados da API do [TMDB (The Movie Database)](https://www.themoviedb.org/).
 
-Currently, two official plugins are available:
+## Funcionalidades
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Lista de **melhores filmes** na página inicial
+- **Pesquisa** de filmes por título
+- Página de **detalhe** de cada filme
+- Navegação entre páginas com **React Router**
+- Estado e pedidos à API com **React Hooks** (`useState`, `useEffect`, `useSearchParams`)
 
-## React Compiler
+## Tecnologias
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React
+- Vite
+- React Router
+- API do TMDB
 
-## Expanding the ESLint configuration
+## Como executar o projecto
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 1. Clonar o repositório
+
+```bash
+git clone https://github.com/eusebio-dev28/movielib.git
+cd movielib
+```
+
+### 2. Instalar as dependências
+
+```bash
+npm install
+```
+
+### 3. Configurar a chave da API
+
+Cria um ficheiro `.env` na raiz do projecto com a tua chave do TMDB:
+
+```
+VITE_TMDB_API_KEY=a_tua_chave_aqui
+```
+
+Obtém a chave gratuitamente em [themoviedb.org](https://www.themoviedb.org/settings/api).
+
+> O ficheiro `.env` não é enviado para o GitHub, por isso cada pessoa deve criar o seu.
+
+### 4. Iniciar o servidor de desenvolvimento
+
+```bash
+npm run dev
+```
+
+Abre o endereço que aparece no terminal (normalmente `http://localhost:5173`).
+
+## Estrutura do projecto
+
+```
+src/
+├── components/   # MovieCard, Navbar
+├── pages/        # Home, Movie, Search
+├── App.jsx
+└── main.jsx
+```
+
+## Autor
+
+**Eusébio Jimbi** · [Jimbi Code](https://github.com/eusebio-dev28)
